@@ -1,1 +1,21 @@
-<p>nav works!</p>
+<nav>
+    <a href="">
+        <mat-icon aria-hidden="false" aria-label="Home Section" fontIcon="home"></mat-icon>
+    </a>
+    <a href="">
+        <mat-icon aria-hidden="false" aria-label="About" fontIcon="account_circle"></mat-icon>
+    </a>
+    <a href="">
+        <mat-icon aria-hidden="false" aria-label="Skills" fontIcon="code"></mat-icon>
+    </a>
+    <a href="">
+        <mat-icon aria-hidden="false" aria-label="Work Experience" fontIcon="work_outline"></mat-icon>
+    </a>
+    <a href="">
+        <mat-icon aria-hidden="false" aria-label="Connect with Sanjay" fontIcon="chat_bubble_outline"></mat-icon>
+    </a>
+    <a href="" *ngIf="themeManager.theme$ | async as theme" (click)="switchTheme(theme,$event)">
+        <mat-icon aria-hidden="false" aria-label="Connect with Sanjay" [fontIcon]="theme === 'light' ? 'wb_incandescent' :'wb_sunny'"></mat-icon>
+    </a>
+
+</nav>

@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+
+@mixin color($color-config)
+{
+    $foreground-config: mat.get-color-from-palette($color-config,foreground);
+    nav{
+        // background-color: mat.get-color-from-palette( $foreground-config, card);;
+    }
+    nav a{
+
+        color: mat.get-color-from-palette( $foreground-config, icon);
+    }
+}
+
+@mixin theme($theme-config)
+{
+    $color-config:mat.get-color-config($theme-config);
+    @if $color-config!=null 
+    {
+        @include color($color-config);
+    }
+
+}

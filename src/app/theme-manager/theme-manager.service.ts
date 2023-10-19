@@ -33,7 +33,7 @@ export class ThemeManagerService {
 function resolvedPrefferedTheme(query:MediaQueryList): Theme
 {
   console.log(query);
-  return query.matches ? 'light': 'dark';
+  return query.matches ? 'light': 'light';
 }
 function getThemeLinkElement():HTMLLinkElement{
   const existingLinkElement = document.head.querySelector('#appTheme') as HTMLLinkElement;

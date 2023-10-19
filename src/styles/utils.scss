@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
 @use 'sass:map';
 @use '../app/banner/banner-theme.component.scss' as banner;
-
+@use '../app//nav/./nav-theme.component.scss' as nav;
 @function with-typography-config($color-config)
 {
     @return (
@@ -21,9 +21,11 @@
 @mixin create-theme-bundle($theme-config){
 
 @include mat.core-theme($theme-config);
-@include mat.button-theme($theme-config);
+@include mat.icon-theme($theme-config);
 @include mat.typography-hierarchy($theme-config);
 //Custom Components
 @include banner.theme($theme-config);
+@include nav.theme($theme-config);
+
 
 }
