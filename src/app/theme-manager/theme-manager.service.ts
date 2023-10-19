@@ -27,14 +27,7 @@ export class ThemeManagerService {
     switchTheme(theme:Theme)
     {
       this.#themeSwitcher.next(theme);
-    }
-
-    constructor()
-    {
-      this.theme$.subscribe(console.log);
-      console.log(this.#themePreferenceQuery.matches)
-    }
-  
+    } 
   }
   
 function resolvedPrefferedTheme(query:MediaQueryList): Theme
