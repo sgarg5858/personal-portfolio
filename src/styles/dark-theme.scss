@@ -1,0 +1,23 @@
+@use '@angular/material' as mat;
+@use 'sass:map';
+@use './utils.scss';
+
+
+$primary:mat.define-palette(mat.$blue-palette);
+$accent:mat.define-palette(mat.$pink-palette);
+$warn:mat.define-palette(mat.$red-palette);
+
+$dark-theme-color-config: mat.define-dark-theme((
+    color:(
+        primary:$primary,
+        accent: $accent,
+        warn: $warn
+    )
+));
+$portfolio-dark-theme: mat.define-dark-theme(utils.with-typography-config($dark-theme-color-config));
+
+
+@mixin apply-theme()
+{
+    @include utils.create-theme-bundle($portfolio-dark-theme);
+}
