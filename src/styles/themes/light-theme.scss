@@ -1,7 +1,6 @@
 @use '@angular/material' as mat;
 @use 'sass:map';
-@use './utils.scss';
-
+@use '../utils.scss';
 
 $primary:mat.define-palette(mat.$blue-palette);
 $accent:mat.define-palette(mat.$pink-palette);
@@ -17,7 +16,4 @@ $light-theme-color-config: mat.define-light-theme((
 $portfolio-light-theme: mat.define-light-theme(utils.with-typography-config($light-theme-color-config));
 
 
-@mixin apply-theme()
-{
-    @include utils.create-theme-bundle($portfolio-light-theme);
-}
+@include utils.create-theme-bundle($portfolio-light-theme);

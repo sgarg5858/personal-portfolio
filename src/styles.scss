@@ -5,11 +5,9 @@
 //Step 4: Load the component styles by providing the theme we created!
 @use '@angular/material' as mat;
 @use 'sass:map';
-@use './styles/dark-theme.scss' as light-theme;
 
 @include mat.core();
 
-@include light-theme.apply-theme();
 
 
 
